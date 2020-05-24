@@ -4,7 +4,7 @@ import React from 'react'
 
 // Bootstrap Dependencies
 import {Navbar, Nav, Container, Image, Row, Col} from 'react-bootstrap'
-import { FaGithub } from 'react-icons/fa'
+import { FaGithub, FaInfo, FaApple, FaBalanceScale, FaSignal, FaGlobeAmericas } from 'react-icons/fa'
 
 import Logo from "../images/logo.png"
 
@@ -22,14 +22,13 @@ export default function Navigation ({children}) {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="flex-column">
+                <Nav.Link href="/about"><FaInfo size={25}/> About</Nav.Link>
                 <Nav.Link href="/github"><FaGithub size={25}/> GitHub</Nav.Link>
-                <Nav.Link href="#link">Link</Nav.Link>
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#link">Link</Nav.Link>
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#link">Link</Nav.Link>
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#link">Link</Nav.Link>
+                <Nav.Link href="/macOS-config"><FaApple size={25}/> macOS Configuration</Nav.Link>
+                <Nav.Link href="/legal"><FaBalanceScale size={25}/> Terms of Use</Nav.Link>
+                <Nav.Link href="/linear-regression"><FaSignal size={25}/> Linear Regression</Nav.Link>
+                <Nav.Link href="/jskycalc"><FaGlobeAmericas size={25}/> JSkyCalc</Nav.Link>
+  
               </Nav>
             </Navbar.Collapse>
           </Navbar>
