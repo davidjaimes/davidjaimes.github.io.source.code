@@ -6,7 +6,14 @@
 
 module.exports = {
 	plugins: [
-		'gatsby-plugin-react-helmet',
+		{
+	    resolve: `gatsby-plugin-sharp`,
+	    options: {
+	      useMozJpeg: false,
+	      stripMetadata: true,
+	      defaultQuality: 75,
+	    },
+	  },
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
@@ -15,19 +22,22 @@ module.exports = {
 			},
 		},
 		{
-	    resolve: `gatsby-source-filesystem`,
-	    options: {
-	      name: `images`,
-	      path: `${__dirname}/src/images`,
-	    },
-	  },
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `images`,
+				path: `${__dirname}/src/images/`,
+			},
+		},
 		{
 		resolve: `gatsby-plugin-mdx`,
 		options: {
+			remarkPlugins: [require(`remark-math`)],
+    	rehypePlugins: [require(`rehype-katex`)],
 			defaultLayouts: {
 				default: require.resolve(`./src/components/layout.jsx`),
 			},
 			extensions: [`.mdx`, `.md`],
+			plugins: [`gatsby-remark-images`],
 			gatsbyRemarkPlugins: [
 				  {
 				    resolve: `gatsby-remark-prismjs`,
@@ -35,27 +45,15 @@ module.exports = {
 				      classPrefix: 'language-',
 				      inlineCodeMarker: null
 				    }
-				  }
+				  },
+				  {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
 				]
 			},
 		},
-		`gatsby-plugin-sharp`,
-		{
-	    resolve: `gatsby-transformer-remark`,
-	    options: {
-	      plugins: [
-	      	`gatsby-remark-relative-images`,
-	        {
-	          resolve: `gatsby-remark-images`,
-	          options: {
-	            // It's important to specify the maxWidth (in pixels) of
-	            // the content container as this plugin uses this as the
-	            // base for generating different widths of each image.
-	            maxWidth: 590,
-	          },
-	        },
-	      ],
-	    },
-	  },
 	],
 }
