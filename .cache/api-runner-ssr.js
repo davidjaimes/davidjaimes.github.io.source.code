@@ -1,4 +1,7 @@
 var plugins = [{
+      plugin: require('/Users/djaimes/davidjaimes.github.io.source.code/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
       plugin: require('/Users/djaimes/davidjaimes.github.io.source.code/node_modules/gatsby-plugin-mdx/gatsby-ssr'),
       options: {"plugins":[],"defaultLayouts":{"default":"/Users/djaimes/davidjaimes.github.io.source.code/src/components/layout.jsx"},"extensions":[".mdx",".md"],"gatsbyRemarkPlugins":[{"resolve":"gatsby-remark-prismjs","options":{"classPrefix":"language-","inlineCodeMarker":null}}]},
     }]
