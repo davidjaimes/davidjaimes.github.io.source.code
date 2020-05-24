@@ -5,6 +5,31 @@
  */
 
 module.exports = {
-  /* Your site config here */
-  plugins: [],
+	plugins: [
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `pages`,
+				path: `${__dirname}/src/pages/`,
+			},
+		},
+		{
+			resolve: `gatsby-plugin-mdx`,
+			options: {
+				defaultLayouts: {
+					default: require.resolve(`./src/components/layout.jsx`),
+				},
+				extensions: [`.mdx`, `.md`],
+				gatsbyRemarkPlugins: [
+			      {
+			        resolve: `gatsby-remark-prismjs`,
+			        options: {
+			          classPrefix: 'language-',
+			          inlineCodeMarker: null
+			        }
+			      }
+			    ]
+			},
+		},
+	],
 }

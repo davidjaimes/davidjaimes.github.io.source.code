@@ -17,11 +17,17 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.4",
     "@mdx-js/react": "^1.6.4",
+    "bootstrap": "^4.5.0",
     "gatsby": "^2.21.37",
     "gatsby-plugin-mdx": "^1.2.12",
+    "gatsby-remark-prismjs": "^3.5.2",
     "gatsby-source-filesystem": "^2.3.8",
+    "gatsby-transformer-remark": "^2.8.13",
+    "prismjs": "^1.20.0",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-bootstrap": "^1.0.1",
+    "react-dom": "^16.12.0",
+    "react-icons": "^3.10.0"
   },
   "devDependencies": {
     "gh-pages": "^2.2.0",
