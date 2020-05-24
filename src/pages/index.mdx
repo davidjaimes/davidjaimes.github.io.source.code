@@ -1,0 +1,104 @@
+# Gatsby Configuration
+
+Use the Gatsby CLI to create a new site, specifying the hello-world starter.
+
+```bash
+gatsby new my-hello-world-starter https://github.com/gatsbyjs/gatsby-starter-hello-world
+```
+
+Publish files to a gh-pages branch on GitHub (or any other branch anywhere else).
+
+```bash
+npm install gh-pages --save-dev
+```
+
+Create a new directoy and file under the root called `scripts/deploy-github.js`. Then, add the following the file you just created:
+
+```js
+const ghpages = require('gh-pages')
+
+ghpages.publish(
+  'public',
+  {
+    branch: 'master',
+    repo: 'https://github.com/davidjaimes/davidjaimes.github.io.git',
+  },
+  () => {
+    console.log('Deploy Complete!')
+  }
+)
+```
+
+Include popular icons in your React projects easily with `react-icons`, which utilizes ES6 imports that allows you to include only the icons that your project is using.
+
+```bash
+npm install react-icons --save
+```
+
+The best way to consume React-Bootstrap is via the npm package which you can install with `npm` (or `yarn` if you prefer).
+
+```bash
+npm install react-bootstrap bootstrap
+```
+
+MDX is markdown for the component era. It lets you write JSX embedded inside markdown. It’s a great combination because it allows you to use markdown’s often terse syntax (such as `# heading`) for the little things and JSX for more advanced components.
+
+```bash
+npm install gatsby-plugin-mdx @mdx-js/mdx @mdx-js/react
+```
+
+Setup your `gatsby-config.js` file:
+
+```js
+module.exports = {
+	plugins: [
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `pages`,
+				path: `${__dirname}/src/pages/`,
+			},
+		},
+		{
+			resolve: `gatsby-plugin-mdx`,
+			options: {
+				defaultLayouts: {
+					default: require.resolve(`./src/components/layout.jsx`),
+				},
+				extensions: [`.mdx`, `.md`],
+				gatsbyRemarkPlugins: [
+			      {
+			        resolve: `gatsby-remark-prismjs`,
+			        options: {
+			          classPrefix: 'language-',
+			          inlineCodeMarker: null
+			        }
+			      }
+			    ]
+			},
+		},
+	],
+}
+```
+
+Setup your `gastby-browser.js` file:
+
+```js
+//bootstrap
+import 'bootstrap/dist/css/bootstrap.css';
+
+// prism.js
+require("prismjs/themes/base16-google.light.css")
+```
+
+Adds syntax highlighting to code blocks in markdown files using PrismJS.
+
+```bash
+npm install --save gatsby-transformer-remark gatsby-remark-prismjs prismjs
+```
+
+A Gatsby source plugin for sourcing data into your Gatsby application from your local filesystem.
+
+```bash
+npm install --save gatsby-source-filesystem
+```

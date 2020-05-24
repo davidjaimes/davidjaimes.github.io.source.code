@@ -15,7 +15,10 @@
     "deploy:github": "npm run build && node ./scripts/deploy-github"
   },
   "dependencies": {
+    "@mdx-js/mdx": "^1.6.4",
+    "@mdx-js/react": "^1.6.4",
     "gatsby": "^2.21.37",
+    "gatsby-plugin-mdx": "^1.2.12",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },

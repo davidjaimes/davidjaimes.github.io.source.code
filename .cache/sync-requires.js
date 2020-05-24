@@ -5,6 +5,6 @@ const preferDefault = m => m && m.default || m
 
 
 exports.components = {
-  "component---src-pages-index-js": hot(preferDefault(require("/Users/djaimes/davidjaimes.github.io.source.code/src/pages/index.js")))
+
 }
 
