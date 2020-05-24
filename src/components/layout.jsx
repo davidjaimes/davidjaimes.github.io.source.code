@@ -4,7 +4,7 @@ import React from 'react'
 
 // Bootstrap Dependencies
 import {Navbar, Nav, Container, Image, Row, Col} from 'react-bootstrap'
-import { FaGithub, FaInfo, FaApple, FaBalanceScale, FaSignal, FaGlobeAmericas, FaQuinscape } from 'react-icons/fa'
+import { FaGithub, FaInfo, FaApple, FaBalanceScale, FaSignal, FaGlobeAmericas, FaQuinscape, FaJsSquare } from 'react-icons/fa'
 
 import Logo from "../images/logo.png"
 
@@ -29,6 +29,7 @@ export default function Navigation ({children}) {
                 <Nav.Link href="/linear-regression"><FaSignal size={25}/> Linear Regression</Nav.Link>
                 <Nav.Link href="/jskycalc"><FaGlobeAmericas size={25}/> JSkyCalc</Nav.Link>
                 <Nav.Link href="/eclipsing-binaries"><FaQuinscape size={25}/> Eclipsing Binaries</Nav.Link>
+                <Nav.Link href="/gatsby-config"><FaJsSquare size={25}/> Gatsby Configuration</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>

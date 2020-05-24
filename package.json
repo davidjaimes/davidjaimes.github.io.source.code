@@ -12,13 +12,14 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy:github": "npm run build && node ./scripts/deploy-github"
+    "deploy": "npm run build && node ./scripts/deploy-github"
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.4",
     "@mdx-js/react": "^1.6.4",
     "bootstrap": "^4.5.0",
     "gatsby": "^2.21.37",
+    "gatsby-plugin-manifest": "^2.4.9",
     "gatsby-plugin-mdx": "^1.2.12",
     "gatsby-plugin-react-helmet": "^3.3.2",
     "gatsby-plugin-sharp": "^2.6.9",

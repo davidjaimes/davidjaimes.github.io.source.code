@@ -14,6 +14,12 @@ module.exports = {
 	      defaultQuality: 75,
 	    },
 	  },
+	  {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: 'src/images/favicon.png',
+      },
+    },
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
