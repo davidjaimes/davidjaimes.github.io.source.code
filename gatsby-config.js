@@ -17,7 +17,12 @@ module.exports = {
 	  {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        icon: 'src/images/favicon.png',
+        icon: `src/images/favicon.png`,
+        name: `David Jaimes`,
+        short_name: `djaimes`,
+        description: `Husband, Scientist, and Trail Runner.`,
+        lang: `en`,
+        start_url: `/`
       },
     },
 		{
