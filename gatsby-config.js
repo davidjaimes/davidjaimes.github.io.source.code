@@ -22,7 +22,9 @@ module.exports = {
         short_name: `djaimes`,
         description: `Husband, Scientist, and Trail Runner.`,
         lang: `en`,
-        start_url: `/`
+        start_url: `/`,
+        display: `standalone`,
+        theme_color: `#fff`
       },
     },
 		{
