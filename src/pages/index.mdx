@@ -1,15 +1,47 @@
-import {Card, Jumbotron} from "react-bootstrap"
+import {Image, Badge, Card, Button, Row, Col} from "react-bootstrap"
 import {MountLaguna} from "../images/mount-laguna.jpg"
+import Logo from "../images/favicon.png"
 
-<Jumbotron>
-  <h1 className="text-center">Husband. Scientist. Trail Runner.</h1>
-  <hr/>
-  <p className="text-muted">
-  	Creativity and imagination are great starting places, but hard-headed thinking and extreme attention to detail are essential to success.
-  </p>
-  <p className="text-muted text-right">- Jet Propulsion Laboratory</p>
-  <hr/>
-</Jumbotron>
+
+<Image src={Logo} style={{height: "80px"}} className="mb-5"/>
+<Badge variant="success">1.0.05</Badge>
+
+# A Collection of Data Science Tools and Visualizations for Developers and Engineers
+
+<p className="text-muted">
+Discover the many different ways to collect, analyze, and distribute data gathered from different sources. This is a one-stop shop to build and deploy your own project with easy to follow instructions.
+</p>
+
+<br/>
+
+<Card className="shadow mb-5">
+  <Card.Body>
+    <Card.Title><Button variant="outline-primary stretched-link">Python</Button></Card.Title>
+    <Card.Text>
+    Python is a programming language that lets you work more quickly and integrate your systems more effectively.
+    </Card.Text>
+  </Card.Body>
+</Card>
+
+**Import all your favorite Python libraries.**
+
+```python
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import astropy as ap
+import glob as gl
+import scipy as sp
+```
+
+<Card className="shadow mt-5 mb-5">
+  <Card.Body>
+    <Card.Title><Button variant="outline-primary stretched-link">Miniconda</Button></Card.Title>
+    <Card.Text>
+    Miniconda is a free minimal installer for conda. It is a small, bootstrap version of Anaconda that includes only conda, Python, the packages they depend on, and a small number of other useful packages, including pip, zlib and a few others. Use the <code>conda install command</code> to install 720+ additional conda packages from the Anaconda repository.
+    </Card.Text>
+  </Card.Body>
+</Card>
 
 <br/>
 

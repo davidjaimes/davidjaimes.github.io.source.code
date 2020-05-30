@@ -24,7 +24,8 @@ module.exports = {
         lang: `en`,
         start_url: `/`,
         display: `standalone`,
-        theme_color: `#fff`
+        theme_color: `#fff`,
+        background_color: `#fff`
       },
     },
 		{
