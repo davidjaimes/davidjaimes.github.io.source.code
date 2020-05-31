@@ -12,7 +12,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "npm run build && node ./scripts/deploy-github"
+    "deploy": "npm run build && node ./scripts/deploy-github && bash ./scripts/wc.sh"
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.4",
