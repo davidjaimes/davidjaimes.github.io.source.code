@@ -1,4 +1,4 @@
-import {Image, Badge, Card, Button, Row, Col} from "react-bootstrap"
+import {Image, Badge, Card, Button, Row, Col, Alert} from "react-bootstrap"
 import {MountLaguna} from "../images/mount-laguna.jpg"
 import Logo from "../images/favicon.png"
 
@@ -6,13 +6,13 @@ import Logo from "../images/favicon.png"
 <Image src={Logo} style={{height: "80px"}} className="mb-5"/>
 <Badge variant="success">1.0.05</Badge>
 
-# A Collection of Data Science Tools and Visualizations for Developers and Engineers
+# A Collection of Data Analysis Tools and Visualizations for Students and Scientists
 
 <p className="text-muted">
 Discover the many different ways to collect, analyze, and distribute data gathered from different sources. This is a one-stop shop to build and deploy your own project with easy to follow instructions.
 </p>
 
-<Card className="shadow mt-5 mb-5">
+<Card className="shadow mt-5 mb-5 bg-light">
   <Card.Body>
     <Card.Title><Button variant="outline-primary stretched-link">Python</Button> <small className="text-muted">https://www.python.org/</small></Card.Title>
     <Card.Text>
@@ -28,46 +28,63 @@ Discover the many different ways to collect, analyze, and distribute data gather
 - Popularity is trending and growing.
 - Build all tyoes of software.
 
-*Recommended:* Use the **Miniconda** or **Anaconda** distribution for easy installation and configuration. Then, import your favorite libraries and try out the following example for plotting the first circumbinary star system, Kepler-16:
+*Recommended:* Use the **Miniconda** or **Anaconda** distribution for easy installation and configuration. Then, import your favorite libraries and try out the following example that produces **The Zen of Python**: 
 
 ```python
-from astropy.io import fits, ascii
-from astropy.time import Time
-import matplotlib.pyplot as plt
-from matplotlib.dates import DateFormatter
-import pandas as pd
+s = """Gur Mra bs Clguba, ol Gvz Crgref
+Ornhgvshy vf orggre guna htyl.
+Rkcyvpvg vf orggre guna vzcyvpvg.
+Fvzcyr vf orggre guna pbzcyrk.
+Pbzcyrk vf orggre guna pbzcyvpngrq.
+Syng vf orggre guna arfgrq.
+Fcnefr vf orggre guna qrafr.
+Ernqnovyvgl pbhagf.
+Fcrpvny pnfrf nera'g fcrpvny rabhtu gb oernx gur ehyrf.
+Nygubhtu cenpgvpnyvgl orngf chevgl.
+Reebef fubhyq arire cnff fvyragyl.
+Hayrff rkcyvpvgyl fvyraprq.
+Va gur snpr bs nzovthvgl, ershfr gur grzcgngvba gb thrff.
+Gurer fubhyq or bar-- naq cersrenoyl bayl bar --boivbhf jnl gb qb vg.
+Nygubhtu gung jnl znl abg or boivbhf ng svefg hayrff lbh'er Qhgpu.
+Abj vf orggre guna arire.
+Nygubhtu arire vf bsgra orggre guna *evtug* abj.
+Vs gur vzcyrzragngvba vf uneq gb rkcynva, vg'f n onq vqrn.
+Vs gur vzcyrzragngvba vf rnfl gb rkcynva, vg znl or n tbbq vqrn.
+Anzrfcnprf ner bar ubaxvat terng vqrn -- yrg'f qb zber bs gubfr!"""
 
+d = {}
+for c in (65, 97):
+    for i in range(26):
+        d[chr(i+c)] = chr((i+13) % 26 + c)
 
-fname = 'kplr012644769-20160128150956_dvt.fits'
-hdu = fits.open(fname)
-data = hdu[1].data
-df = pd.DataFrame({'time': data['TIME'], 'flux': data['LC_INIT']})
-df['time'] = Time(df['time'] + 2454833, format='jd').datetime64
-plt.plot(df['time'], df['flux'], '.', ms=3, label=fname)
-
-fname = 'kplr012644769_q1_q16_tce_01_dvt_lc.tbl'
-data = ascii.read(fname)
-df = pd.DataFrame({'time': data['TIME'], 'flux': data['INIT_FLUX_PL']})
-df['time'] = Time(df['time'] + 2454833, format='jd').datetime64
-plt.plot(df['time'], df['flux'], '.', ms=3, c='C0', label=fname)
-
-plt.title('Kepler-16', size=16)
-plt.xlabel(r'Date ($P_{orb}=41.0778$ days)', size=16)
-plt.ylabel(r'Flux ($F_e/F_o - 1$)', size=16)
-
-date_form = DateFormatter("%b %Y")
-plt.gca().xaxis.set_major_formatter(date_form)
-
-plt.xticks(rotation=45)
-plt.grid(ls=':')
-plt.legend(markerscale=4)
-plt.tight_layout()
-plt.savefig('kepler-16.png', dpi=300)
+print("".join([d.get(c, c) for c in s]))
 ```
 
-![](../images/kepler-16.png)
+<br/>
 
-<Card className="shadow mt-5 mb-5">
+| The Zen of Python, by Tim Peters |
+| --- | 
+| Beautiful is better than ugly. |
+| Explicit is better than implicit. |
+| Simple is better than complex. |
+| Complex is better than complicated. |
+| Flat is better than nested. |
+| Sparse is better than dense. |
+| Readability counts. |
+| Special cases aren't special enough to break the rules. |
+| Although practicality beats purity. |
+| Errors should never pass silently. |
+| Unless explicitly silenced. |
+| In the face of ambiguity, refuse the temptation to guess. |
+| There should be one-- and preferably only one --obvious way to do it. |
+| Although that way may not be obvious at first unless you're Dutch. |
+| Now is better than never. |
+| Although never is often better than *right* now. |
+| If the implementation is hard to explain, it's a bad idea. |
+| If the implementation is easy to explain, it may be a good idea. |
+| Namespaces are one honking great idea -- let's do more of those! |
+
+<Card className="shadow mt-5 mb-5 bg-light">
   <Card.Body>
     <Card.Title><Button variant="outline-primary stretched-link">Miniconda</Button> <small className="text-muted">https://docs.conda.io/en/latest/miniconda.html</small></Card.Title>
     <Card.Text>
@@ -97,7 +114,7 @@ Install all Python libraries at once (NumPy and SciPy will also be installed):
 conda install matplotlib pandas astropy notebook scikit-learn
 ```
 
-<Card className="shadow mt-5 mb-5">
+<Card className="shadow mt-5 mb-5 bg-light">
   <Card.Body>
     <Card.Title><Button variant="outline-primary stretched-link">Sublime Text</Button> <small className="text-muted">https://www.sublimetext.com/</small></Card.Title>
     <Card.Text>
