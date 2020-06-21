@@ -23,7 +23,7 @@ export default function Navigation ({children}) {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="flex-column">
                 <Nav.Link href="/about"><FaInfo size={25}/> About</Nav.Link>
-                <Nav.Link href="/github"><FaGithub size={25}/> GitHub</Nav.Link>
+                <Nav.Link href="https://github.com/davidjaimes"><FaGithub size={25}/> GitHub</Nav.Link>
                 <Nav.Link href="/macOS-config"><FaApple size={25}/> macOS Configuration</Nav.Link>
                 <Nav.Link href="/legal"><FaBalanceScale size={25}/> Terms of Use</Nav.Link>
                 <Nav.Link href="/linear-regression"><FaSignal size={25}/> Linear Regression</Nav.Link>
