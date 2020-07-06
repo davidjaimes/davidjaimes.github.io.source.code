@@ -9,7 +9,7 @@ exports.components = {
   "component---src-pages-articles-index-mdx": hot(preferDefault(require("/Users/djaimes/davidjaimes.github.io.source.code/src/pages/articles/index.mdx"))),
   "component---src-pages-eclipsing-binaries-index-mdx": hot(preferDefault(require("/Users/djaimes/davidjaimes.github.io.source.code/src/pages/eclipsing-binaries/index.mdx"))),
   "component---src-pages-gatsby-config-index-mdx": hot(preferDefault(require("/Users/djaimes/davidjaimes.github.io.source.code/src/pages/gatsby-config/index.mdx"))),
-  "component---src-pages-index-mdx": hot(preferDefault(require("/Users/djaimes/davidjaimes.github.io.source.code/src/pages/index.mdx"))),
+  "component---src-pages-index-jsx": hot(preferDefault(require("/Users/djaimes/davidjaimes.github.io.source.code/src/pages/index.jsx"))),
   "component---src-pages-jskycalc-index-mdx": hot(preferDefault(require("/Users/djaimes/davidjaimes.github.io.source.code/src/pages/jskycalc/index.mdx"))),
   "component---src-pages-kepler-16-index-mdx": hot(preferDefault(require("/Users/djaimes/davidjaimes.github.io.source.code/src/pages/kepler-16/index.mdx"))),
   "component---src-pages-legal-index-mdx": hot(preferDefault(require("/Users/djaimes/davidjaimes.github.io.source.code/src/pages/legal/index.mdx"))),

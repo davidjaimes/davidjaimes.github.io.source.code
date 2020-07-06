@@ -2,14 +2,17 @@
 import React from 'react'
 
 // Bootstrap Dependencies
-import {Navbar, Nav, NavDropdown} from 'react-bootstrap'
+import {Navbar, Nav, NavDropdown, Image} from 'react-bootstrap'
 import { FaGithub} from 'react-icons/fa'
+import {Logo} from "../images/logo.png"
 
 
 export default function Navigation() {
 	return (
 		<Navbar collapseOnSelect expand="lg" className="shadow-sm">
-			<Navbar.Brand href="/"><b>David Jaimes</b></Navbar.Brand>
+			<Navbar.Brand href="/">
+            <Image src={Logo} style={{height: "30px", marginRight: "20px"}}/> <b>David Jaimes</b>
+			</Navbar.Brand>
 			<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 			<Navbar.Collapse id="responsive-navbar-nav">
 				<Nav className="mr-auto">
