@@ -48,7 +48,7 @@ module.exports = {
 			remarkPlugins: [require(`remark-math`)],
     	rehypePlugins: [require(`rehype-katex`)],
 			defaultLayouts: {
-				default: require.resolve(`./src/components/layout.jsx`),
+				default: require.resolve(`./src/components/homepage.jsx`),
 			},
 			extensions: [`.mdx`, `.md`],
 			plugins: [`gatsby-remark-images`],

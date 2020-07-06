@@ -11,6 +11,7 @@ exports.components = {
   "component---src-pages-kepler-16-index-mdx": () => import("./../src/pages/kepler-16/index.mdx" /* webpackChunkName: "component---src-pages-kepler-16-index-mdx" */),
   "component---src-pages-legal-index-mdx": () => import("./../src/pages/legal/index.mdx" /* webpackChunkName: "component---src-pages-legal-index-mdx" */),
   "component---src-pages-linear-regression-index-mdx": () => import("./../src/pages/linear-regression/index.mdx" /* webpackChunkName: "component---src-pages-linear-regression-index-mdx" */),
-  "component---src-pages-mac-os-config-index-mdx": () => import("./../src/pages/macOS-config/index.mdx" /* webpackChunkName: "component---src-pages-mac-os-config-index-mdx" */)
+  "component---src-pages-mac-os-config-index-mdx": () => import("./../src/pages/macOS-config/index.mdx" /* webpackChunkName: "component---src-pages-mac-os-config-index-mdx" */),
+  "component---src-pages-prior-index-mdx": () => import("./../src/pages/prior-index.mdx" /* webpackChunkName: "component---src-pages-prior-index-mdx" */)
 }
 

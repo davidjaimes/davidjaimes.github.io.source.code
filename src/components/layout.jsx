@@ -6,7 +6,7 @@ import React from 'react'
 import {Navbar, Nav, Container, Image, Row, Col} from 'react-bootstrap'
 import { FaGithub, FaInfo, FaApple, FaBalanceScale, FaSignal, FaGlobeAmericas, FaQuinscape, FaJsSquare } from 'react-icons/fa'
 
-import Logo from "../images/logo.png"
+import {Logo} from "../images/logo.png"
 
 export default function Navigation ({children}) {
 

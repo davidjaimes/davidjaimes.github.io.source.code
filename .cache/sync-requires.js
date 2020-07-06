@@ -14,6 +14,7 @@ exports.components = {
   "component---src-pages-kepler-16-index-mdx": hot(preferDefault(require("/Users/djaimes/davidjaimes.github.io.source.code/src/pages/kepler-16/index.mdx"))),
   "component---src-pages-legal-index-mdx": hot(preferDefault(require("/Users/djaimes/davidjaimes.github.io.source.code/src/pages/legal/index.mdx"))),
   "component---src-pages-linear-regression-index-mdx": hot(preferDefault(require("/Users/djaimes/davidjaimes.github.io.source.code/src/pages/linear-regression/index.mdx"))),
-  "component---src-pages-mac-os-config-index-mdx": hot(preferDefault(require("/Users/djaimes/davidjaimes.github.io.source.code/src/pages/macOS-config/index.mdx")))
+  "component---src-pages-mac-os-config-index-mdx": hot(preferDefault(require("/Users/djaimes/davidjaimes.github.io.source.code/src/pages/macOS-config/index.mdx"))),
+  "component---src-pages-prior-index-mdx": hot(preferDefault(require("/Users/djaimes/davidjaimes.github.io.source.code/src/pages/prior-index.mdx")))
 }
 
