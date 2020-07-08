@@ -17,7 +17,7 @@ export default function CardIndex() {
 				<Card.Body>
 					<Media>
 						<Media.Body className="mb-3">
-							<Card.Title><a href="/kepler-16" className="text-dark stretched-link"><FaBook size={25}/> Kepler-16b: The First Circumbinary Planet</a></Card.Title>
+							<Card.Title><a href="/kepler-16b" className="text-dark stretched-link"><FaBook size={25}/> Kepler-16b: The First Circumbinary Planet</a></Card.Title>
 							<Badge pill variant="dark">Python</Badge>{' '}
 							<Badge pill variant="dark">AstroPy</Badge>{' '}
 						</Media.Body>
