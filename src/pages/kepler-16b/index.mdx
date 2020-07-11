@@ -21,7 +21,7 @@ wget -v -O 'kplr012644769_q1_q16_tce_01_dvt_lc.tbl' 'http://exoplanetarchive.ipa
 
 **Matplotlib** is a comprehensive library for creating static, animated, and interactive visualizations in Python.
 
-<p className="text-muted mb-0">Import all the Python dependencies:</p>
+Import all the Python dependencies:
 
 ```python
 from astropy.io import fits, ascii
@@ -31,7 +31,9 @@ from matplotlib.dates import DateFormatter
 import pandas as pd
 ```
 
-<p className="text-muted mt-4 mb-0">Use <code>astropy.io.fits</code> to read in the FITS file:</p>
+<br/>
+
+Use `astropy.io.fits` to read in the FITS file:
 
 ```python
 fname = 'kplr012644769-20160128150956_dvt.fits'
@@ -42,7 +44,9 @@ df['time'] = Time(df['time'] + 2454833, format='jd').datetime64
 plt.plot(df['time'], df['flux'], '.', ms=3, label=fname)
 ```
 
-<p className="text-muted mt-4 mb-0">Use <code>astropy.io.ascii</code> to read in the TBL file:</p>
+<br/>
+
+Use `astropy.io.ascii` to read in the TBL file:
 
 ```python
 fname = 'kplr012644769_q1_q16_tce_01_dvt_lc.tbl'
@@ -52,7 +56,9 @@ df['time'] = Time(df['time'] + 2454833, format='jd').datetime64
 plt.plot(df['time'], df['flux'], '.', ms=3, c='C0', label=fname)
 ```
 
-<p className="text-muted mt-4 mb-0">Add names to your labels:</p>
+<br/>
+
+Add names to your labels:
 
 ```python
 plt.title('Kepler-16', size=16)
@@ -60,14 +66,18 @@ plt.xlabel(r'Date ($P_{orb}=41.0778$ days)', size=16)
 plt.ylabel(r'Flux ($F_e/F_o - 1$)', size=16)
 ```
 
-<p className="text-muted mt-4 mb-0">Use <code>matplotlib.dates.DateFormatter</code> to chage dates from <b>YYYY-MM-DD</b> to <b>MMM YYYY</b> format:</p>
+<br/>
+
+Use `matplotlib.dates.DateFormatter` to chage dates from **YYYY-MM-DD** to **MMM YYYY** format:
 
 ```python
 date_form = DateFormatter("%b %Y")
 plt.gca().xaxis.set_major_formatter(date_form)
 ```
 
-<p className="text-muted mt-4 mb-0">Add final layout options:</p>
+<br/>
+
+Add final layout options:
 
 ```python
 plt.xticks(rotation=45)
