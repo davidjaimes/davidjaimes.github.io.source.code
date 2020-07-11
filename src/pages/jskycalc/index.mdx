@@ -4,10 +4,6 @@
 
 **JSkycalc** expedites the "time-and-the-sky" calculations needed by observational astronomers. To follow the original directions on setting up JSkyCalc on your computer, go to [John Thorstensen's][2] website. His directions might be a little outdated (from year 2008) but they still work.
 
-<br/>
-
-![](../../images/jskycalc.png)
-
 <br/><br/>
 
 ## Installing JSkyCalc on macOS
@@ -40,30 +36,47 @@ cd ~/jskycalc
 
 ### 3. Install Oracle-Java JDK Download
 
-Run the java command on the jar file and it should start right up. If you don't have java installed in your system you will get a messege. Click on "more info" and it will take you to the [Oracle-Java][1] website.  Click on "Oracle JDK Download" button from Java SE 12.0.2 section and then download the `jdk-12.0.2_osx-x64_bin.dmg` file.
+Run the java command on the jar file and it should start right up. If you don't have java installed in your system you will get a messege. Click on "more info" and it will take you to the [Oracle-Java][1] website.  Click on "Oracle JDK Download" button from **Java SE 14** section and then download the `jdk-14.0.1_osx-x64_bin.dmg` file.
 
 ```shell
 java -jar JSkyCalc.jar
 ```
 
-![jskycalc-install]
+<br/>
 
-## Customize site menu
-4. To add Mount Laguna Observatory to JSkyCalc, start by unpacking the jar file.
-   ```
-   jar -xvf JSkyCalc.jar
-   ```
-5. Edit `skycalcsites.dat` to add Mount Laguna Observatory as the first site (above Kitt Peak)--it will become the default.
+![](../../images/jskycalc.png)
 
-   ```
-   "Mount Laguna Obs.", 7.76173, 32.84, 8., 1, "Pacific", "P", 1859., 1859.
-   ```
-6. Reconstruct the jar file and all the changes will take effect.
-   ```
-   jar -cvmf myManifest.mf JSkyCalc.jar .
-   ```
-   
-![jskycalc-custom]
+<br/><br/>
+
+### 4. Unpack Files from Jar File
+
+To add Mount Laguna Observatory to JSkyCalc, start by unpacking the jar file.
+
+```shell
+jar -xvf JSkyCalc.jar
+```
+
+<br/>
+
+### 5. Add a New Site Location as Default
+
+Open `skycalcsites.dat` and add Mount Laguna Observatory as the first site (above Kitt Peak)--it will become the default.
+
+```
+"Mount Laguna Obs.", 7.76173, 32.84, 8., 1, "Pacific", "P", 1859., 1859.
+```
+
+<br/>
+
+### 6. Save Changes to Jar File
+
+Reconstruct the jar file and all the changes will take effect.
+
+```shell
+jar -cvmf myManifest.mf JSkyCalc.jar .
+```
+
+<br/>
 
 ## Environment setup
 7. Add following lines to your `~/.bash_profile` file and you will be able to start JSkyCalc from any directory.
@@ -95,4 +108,3 @@ java -jar JSkyCalc.jar
 [2]: https://www.dartmouth.edu/~physics/labs/skycalc/flyer.html
 
 [jskycalc-install]: ../../images/jskycalc-install.png
-[jskycalc-custom]: ../../images/jskycalc-custom.png
