@@ -1,10 +1,26 @@
 
 import { Alert } from 'react-bootstrap';
 
-<h1 align="center">
-  Fitting a Line to Data
-</h1>
+<h1 align="center" style={{marginTop: "2em"}}>Fitting a Line to Data with <b>Linear Algebra</b></h1>
+
+<br/><br/>
+
+**Linear regression** attempts to model the relationship between two variables by fitting a linear equation to observed data. One variable is considered to be an explanatory variable, and the other is considered to be a dependent variable. For example, a modeler might want to relate the weights of individuals to their heights using a linear regression model.
+
 <br/>
+
+## Introduction
+
+You have a set of $N > 2$ points ($x_i, y_i)$, with known Gaussian uncertainties $\sigma_{yi}$ in the $y$ direction, and no uncertainty at all (that is, perfect knowledge) in the $x$ direction. You want to find the function $f(x)$ of the form
+
+$$
+f(x) = mx + b \ ,
+$$
+
+where $m$ is the slope and $b$ is the intercept, that *best fits* the points. What is meant by the term “best fit” is, of course, very important; we are making a choice here to which we will return.
+
+<br/>
+
 <Alert variant={'info'}>
     This exercise is adapted from <strong>Data analysis recipes: Fitting a model to data</strong> by David W. Hogg and Jo Bovy and Dustin Lang, 2010, 1008.4686, arXiv, astro-ph.IM, https://arxiv.org/abs/1008.4686.
 </Alert>
@@ -44,6 +60,8 @@ $$
 ## Exercise 1
 
 Using the standard linear algebra method of this Section, fit a straight line $y = mx + b$ to the $x$, $y$, $\sigma_y$ values for data points 5 through 20 in Table 1 on page 6. That is, ignore the first four data points, and also ignore the columns for $\sigma_x$ and $\rho_{xy}$. Make a plot showing the points, their uncertainties, and the best-fit line. Your plot should end up looking like Figure 1. What is the standard uncertainty variance $\sigma^2_m$ on the slope of the line?
+
+<br/>
 
 Table 1 on page 6:
 ```
@@ -110,6 +128,7 @@ def linear(objectx, objecty, objectey):
 ## Results
 
 Read the date, remove unwanted lines, and preform linear regression.
+
 ```python
 import matplotlib.pyplot as plt
 import numpy as np
@@ -122,10 +141,15 @@ x = np.linspace(0, 300)
 y = m * x + b
 ```
 
+<br/>
+
 Plot the data:
+
 ```python
 plt.errorbar(df['x'], df['y'], yerr=df['sig_y'], label='Data')
 plt.plot(x, y, label='Model')
 ```
+
+<br/>
 
 ![exercise1](../../images/exercise1.png)

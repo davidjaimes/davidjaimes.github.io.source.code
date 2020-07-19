@@ -9,6 +9,7 @@ import {FaBook} from 'react-icons/fa'
 import Kepler16 from "../images/kepler-16b.png"
 import KOI3570 from "../images/koi-3570-pflc.png"
 import JSkyCalc from "../images/jskycalc-user-interface.png"
+import Exercise1 from "../images/exercise1.png"
 
 
 export default function CardIndex() {
@@ -58,6 +59,22 @@ export default function CardIndex() {
 					</Media>
 					<Card.Text>
 						<b>JSkycalc</b> expedites the "time-and-the-sky" calculations needed by observational astronomers. To follow the original directions on setting up JSkyCalc on your computer, go to <b>John Thorstensen's</b> website. His directions might be a little outdated (from year 2008) but they still work.
+					</Card.Text>
+				</Card.Body>
+			</Card>
+
+			<Card className="mt-5 mb-5 border border-dark">
+				<Card.Body>
+					<Media>
+						<Media.Body className="mb-3">
+							<Card.Title><a href="/linear-regression" className="text-dark stretched-link"><FaBook size={25}/> Fitting a Line to Data with Linear Algebra</a></Card.Title>
+							<Badge pill variant="dark">Python</Badge>{' '}
+							<Badge pill variant="dark">Matplotlib</Badge>{' '}
+						</Media.Body>
+						<Image src={Exercise1} rounded className="mb-3 border border-secondary" width={120} height={90}/>
+					</Media>
+					<Card.Text>
+						<b>Linear regression</b> attempts to model the relationship between two variables by fitting a linear equation to observed data. One variable is considered to be an explanatory variable, and the other is considered to be a dependent variable. For example, a modeler might want to relate the weights of individuals to their heights using a <b>linear regression model</b>.
 					</Card.Text>
 				</Card.Body>
 			</Card>
