@@ -8,6 +8,7 @@ import {FaBook} from 'react-icons/fa'
 // Images
 import Kepler16 from "../images/kepler-16b.png"
 import KOI3570 from "../images/koi-3570-pflc.png"
+import JSkyCalc from "../images/jskycalc-user-interface.png"
 
 
 export default function CardIndex() {
@@ -41,6 +42,22 @@ export default function CardIndex() {
 					</Media>
 					<Card.Text>
 						<b>KOI-3570</b> (aliases: <b>2MASS J19405783+4009273</b>, <b>KIC 5023948</b>, and <b>WISE J194057.82+400927.3</b>) is an eclipsing binary star system. The term KOI means exactly what the name implies – Kepler has declared these to be "objects of interest," not planetary candidates. KOI-3570 is a member of the old open cluster NGC 6819. <b>NGC 6819</b> is an open cluster (commonly known as an "open star cluster") located 7,200 light years away in the Cygnus constellation. It was discovered by Caroline Herschel on 12 May 1784.
+					</Card.Text>
+				</Card.Body>
+			</Card>
+
+			<Card className="mt-5 mb-5 border border-dark">
+				<Card.Body>
+					<Media>
+						<Media.Body className="mb-3">
+							<Card.Title><a href="/jskycalc" className="text-dark stretched-link"><FaBook size={25}/> JSkyCalc: An Observing Aid</a></Card.Title>
+							<Badge pill variant="dark">Astronomy</Badge>{' '}
+							<Badge pill variant="dark">Java</Badge>{' '}
+						</Media.Body>
+						<Image src={JSkyCalc} rounded className="mb-3 border border-secondary" width={120} height={90}/>
+					</Media>
+					<Card.Text>
+						<b>JSkycalc</b> expedites the "time-and-the-sky" calculations needed by observational astronomers. To follow the original directions on setting up JSkyCalc on your computer, go to <b>John Thorstensen's</b> website. His directions might be a little outdated (from year 2008) but they still work.
 					</Card.Text>
 				</Card.Body>
 			</Card>
