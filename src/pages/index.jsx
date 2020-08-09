@@ -15,10 +15,10 @@ export default function Index() {
 			<Navigation></Navigation>
 
 			<Container fluid>
-				<Row className="justify-content-center">
+				<Row className="mt-5 justify-content-center">
 					<Col style={{maxWidth: "768px"}}>
 						<h1 className="mt-5 text-muted text-center">Utilization of <b className="text-dark">Data Analysis</b> and <b className="text-dark">Visualization</b> Tools</h1>
-						<p className="mt-5 text-muted text-center">Discover the many different ways to collect, analyze, and distribute data gathered from different sources. This is a one-stop shop to build and deploy your own project with easy to follow instructions.</p>
+						<p className="mt-5 mb-5 text-muted text-center">Discover the many different ways to collect, analyze, and distribute data gathered from different sources. This is a one-stop shop to build and deploy your own project with easy to follow instructions.</p>
 
 						<CardIndex></CardIndex>
 					</Col>
