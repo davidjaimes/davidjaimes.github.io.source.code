@@ -1,4 +1,7 @@
 var plugins = [{
+      plugin: require('/Users/djaimes/davidjaimes.github.io.source.code/node_modules/gatsby-plugin-advanced-sitemap/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
       plugin: require('/Users/djaimes/davidjaimes.github.io.source.code/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"icon":"src/images/favicon.png","name":"David Jaimes","short_name":"djaimes","description":"Husband, Scientist, and Trail Runner.","lang":"en","start_url":"/","display":"standalone","theme_color":"#fff","background_color":"#fff","cache_busting_mode":"query","include_favicon":true,"legacy":true,"theme_color_in_head":true,"cacheDigest":"31e1c5582d361fd5209c883ca36ae646"},
     },{
