@@ -5,7 +5,11 @@
  */
 
 module.exports = {
+	siteMetadata: {
+    siteUrl: `https://www.example.com`,
+	},
 	plugins: [
+		`gatsby-plugin-advanced-sitemap`,
 		{
 	    resolve: `gatsby-plugin-sharp`,
 	    options: {
