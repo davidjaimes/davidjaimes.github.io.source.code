@@ -6,7 +6,7 @@
 
 module.exports = {
 	siteMetadata: {
-    siteUrl: `https://www.example.com`,
+    siteUrl: `https://djaimes.com`,
 	},
 	plugins: [
 		`gatsby-plugin-advanced-sitemap`,
