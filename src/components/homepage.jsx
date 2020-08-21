@@ -6,7 +6,7 @@ import {Container, Row, Col} from 'react-bootstrap'
 
 // Import Templates
 import Navigation from "../components/navigation"
-import Navigation from "../components/head"
+import Head from "../components/head"
 
 
 export default function HomePage({children}) {
