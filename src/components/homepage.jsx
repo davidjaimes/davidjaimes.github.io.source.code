@@ -6,11 +6,13 @@ import {Container, Row, Col} from 'react-bootstrap'
 
 // Import Templates
 import Navigation from "../components/navigation"
+import Navigation from "../components/head"
 
 
 export default function HomePage({children}) {
 	return (
 		<div>
+			<Head/>
 			<Navigation></Navigation>
 
 			<Container fluid>
