@@ -5,7 +5,7 @@ export default () =>
     <Helmet>
     
         {/* <!-- Primary Meta Tags --> */}
-        <title>My Awesome Website</title>
+        <title>David Jaimes</title>
         <meta name="title" content="My Awesome Website" />
         <meta name="description" content="This website is so awesome that I really don't think you can handle how much awesome that is happening here." />
 

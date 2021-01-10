@@ -15,7 +15,7 @@ import Exercise1 from "../images/exercise1.png"
 export default function CardIndex() {
 	return (
 		<div>
-			<Card className="mt-5 mb-5 border border-dark">
+			<Card className="mt-5 mb-5 border border-dark text-muted">
 				<Card.Body>
 					<Media>
 						<Media.Body className="mb-3">
@@ -31,7 +31,7 @@ export default function CardIndex() {
 				</Card.Body>
 			</Card>
 
-			<Card className="mt-5 mb-5 border border-dark">
+			<Card className="mt-5 mb-5 border border-dark text-muted">
 				<Card.Body>
 					<Media>
 						<Media.Body className="mb-3">
@@ -47,7 +47,7 @@ export default function CardIndex() {
 				</Card.Body>
 			</Card>
 
-			<Card className="mt-5 mb-5 border border-dark">
+			<Card className="mt-5 mb-5 border border-dark text-muted">
 				<Card.Body>
 					<Media>
 						<Media.Body className="mb-3">
@@ -63,7 +63,7 @@ export default function CardIndex() {
 				</Card.Body>
 			</Card>
 
-			<Card className="mt-5 mb-5 border border-dark">
+			<Card className="mt-5 mb-5 border border-dark text-muted">
 				<Card.Body>
 					<Media>
 						<Media.Body className="mb-3">

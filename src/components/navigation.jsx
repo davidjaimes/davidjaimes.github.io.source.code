@@ -3,14 +3,14 @@ import React from 'react'
 
 // Bootstrap Dependencies
 import {Navbar, Nav, NavDropdown} from 'react-bootstrap'
-import {FaGithub, FaPython} from 'react-icons/fa'
+import {FaGithub, FaSeedling} from 'react-icons/fa'
 
 
 export default function Navigation() {
 	return (
 		<Navbar collapseOnSelect expand="lg" className="shadow-sm">
 			<Navbar.Brand href="/">
-          <FaPython size={30}/> <b>David Jaimes</b>
+          <FaSeedling size={30} color={'grey'}/> <b>David Jaimes</b>
 			</Navbar.Brand>
 			<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 			<Navbar.Collapse id="responsive-navbar-nav">
